@@ -1,5 +1,5 @@
-var app = angular.module("myWorks", []);
-app.controller("ToDoController", [function ($scope) {
+var app = angular.module("toDoApp", []);
+app.controller("ToDoController", [ '$scope', function ($scope) {
     // read from Local Storage:
     $scope.tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
