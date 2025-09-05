@@ -1,27 +1,17 @@
 var app = angular.module("toDoApp", []);
-app.controller("ToDoController", [ '$scope', function ($scope) {
-    // read from Local Storage:
-    $scope.tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-    // adding task:
-    $scope.addTask = function () {
-
-    }
-
-    // Ssave tasks:
-    $scope.saveTasks = function () {
+app.controller("ToDoController", function($scope) {
+    const ctrl = this;
+    this.today = new Date();
+    $scope.toDos = [
+        {title: "Learn AngularJS", completed: false},
+        {title: "Learn Java", completed: false}
+    ];
+    $scope.addToDo = function(toDo) {
 
     }
 
-    // removing task:
-    $scope.removeTask = function () {
+    $scope.removeToDo = function(toDo) {
 
     }
-
-    // updating task:
-    $scope.updateTask = function (task) {
-
-    }
-
-
-}])
+})

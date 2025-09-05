@@ -5,8 +5,14 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
         <script src="app.js"></script>
+        <script src="directives/headerDirective.js"></script>
+        <script src="directives/toDoListDirective.js"></script>
+        <script src="directives/footerDirective.js"></script>
     </head>
     <body ng-controller="ToDoController">
-        <h1>To-Do List</h1>
+
+        <header-directive></header-directive>
+        <to-do-list-directive></to-do-list-directive>
+        <footer-directive></footer-directive>
     </body>
 </html>

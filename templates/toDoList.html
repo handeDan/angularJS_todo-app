@@ -1,0 +1,7 @@
+<h3>Your tasks</h3>
+<ul>
+    <li ng-repeat="toDo in toDos">
+        <input type="checkbox" ng-model="toDo.completed"/>
+        <span ng-bind="toDo.title">{{toDo.title}}</span>
+    </li>
+</ul>
